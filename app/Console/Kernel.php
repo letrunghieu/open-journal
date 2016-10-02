@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Console;
+namespace OpenJournal\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use OpenJournal\Console\Commands\CreateUserCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -13,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        CreateUserCommand::class
     ];
 
     /**

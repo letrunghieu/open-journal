@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace OpenJournal\Providers;
 
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
