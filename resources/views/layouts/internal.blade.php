@@ -80,6 +80,8 @@
 @yield('content')
 
 <!-- Scripts -->
+<script src="/js/ui.vendors.js"></script>
+<script src="/js/ui.js"></script>
 <script src="/js/app.js"></script>
 </body>
 </html>
