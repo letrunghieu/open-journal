@@ -67,6 +67,8 @@ webpackJsonp([0],{
 	        _this.state = {
 	            timestamp: Date.now()
 	        };
+
+	        _this._onDateChanged = _this._onDateChanged.bind(_this);
 	        return _this;
 	    }
 
@@ -82,9 +84,16 @@ webpackJsonp([0],{
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'journal-header' },
-	                    _react2.default.createElement(_JournalDate2.default, { timestamp: timestamp })
+	                    _react2.default.createElement(_JournalDate2.default, { timestamp: timestamp, onDateChanged: this._onDateChanged })
 	                )
 	            );
+	        }
+	    }, {
+	        key: '_onDateChanged',
+	        value: function _onDateChanged(timestamp) {
+	            this.setState({
+	                timestamp: timestamp
+	            });
 	        }
 	    }]);
 
