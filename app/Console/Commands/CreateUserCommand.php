@@ -46,24 +46,24 @@ class CreateUserCommand extends Command
             'password' => '',
         ];
 
-        $attributes['name'] = $this->ask("Enter your name:");
+        $attributes['name']  = $this->ask("Enter your name:");
         $attributes['email'] = $this->ask("Enter your email:");
-        $password = $this->secret("Enter your password:");
-        $password2 = $this->secret("Enter your password again:");
+        $password            = $this->secret("Enter your password:");
+        $password2           = $this->secret("Enter your password again:");
         if ($password != $password2) {
             $this->error("Two passwords are not matched");
 
             return false;
         }
-        $attributes['password'] = $password;
+        $attributes['password'] = bcrypt($password);
 
         $user = User::find(1);
         if (!$user) {
             $user = User::create($attributes);
         } else {
-            $user->name = $attributes['name'];
-            $user->email = $attributes['email'];
-            $user->password = bcrypt($attributes['password']);
+            $user->name     = $attributes['name'];
+            $user->email    = $attributes['email'];
+            $user->password = $attributes['password'];
             $user->save();
         }
 

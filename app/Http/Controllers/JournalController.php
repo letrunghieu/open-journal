@@ -33,7 +33,7 @@ class JournalController extends Controller
      */
     public function create()
     {
-        //
+        return view('journals.create');
     }
 
     /**
