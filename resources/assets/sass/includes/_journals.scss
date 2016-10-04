@@ -1,7 +1,7 @@
 /* Format journal page */
 #journal-editor {
   .journal-title {
-    input[type=text] {
+    textarea {
       display: block;
       width: 100%;
       border: none;

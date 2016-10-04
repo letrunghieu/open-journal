@@ -1,4 +1,5 @@
 import React from 'react';
+import TextArea from 'react-textarea-autosize'
 
 class JournalTitle extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class JournalTitle extends React.Component {
         let {title} = this.props;
         return (
             <div className="journal-title">
-                <input type="text" value={title} onChange={this._onTitleChanged} placeholder="A short title ..."/>
+                <TextArea value={title} onChange={this._onTitleChanged} placeholder="A short title ..."/>
             </div>
         );
     }
