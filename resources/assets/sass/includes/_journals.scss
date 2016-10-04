@@ -1,5 +1,14 @@
 /* Format journal page */
 #journal-editor {
+  .journal-date {
+    .display-value {
+      display: inline-block;
+      margin: 0 1em;
+    }
+    .control {
+      cursor: pointer;
+    }
+  }
   .journal-title {
     textarea {
       display: block;

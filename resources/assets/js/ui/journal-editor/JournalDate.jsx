@@ -18,7 +18,9 @@ class JournalDate extends React.Component {
 
         return (
             <div className="journal-date">
-                <span className="display-value">{dateStr}</span>
+                <i className="fa fa-chevron-left control prev" onClick={this._goToPrevDate}/>
+                <span className="display-value" title="Click the next/prev arrow buttons to change the date">{dateStr}</span>
+                <i className="fa fa-chevron-right control next" onClick={this._goToNextDate} />
             </div>
         );
     }
