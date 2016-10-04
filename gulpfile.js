@@ -32,7 +32,8 @@ gulp.task('react-js', function () {
                 vendors: [
                     'react',
                     'react-dom',
-                    'moment'
+                    'moment',
+                    'react-textarea-autosize'
                 ]
             },
             output: {

@@ -1,0 +1,25 @@
+/* Format journal page */
+#journal-editor {
+  .journal-title {
+    input[type=text] {
+      display: block;
+      width: 100%;
+      border: none;
+      font-size: $journal-title-font-size;
+      text-align: center;
+    }
+  }
+
+  .journal-content {
+    border-top: 1px solid $journal-body-border-color;
+    border-bottom: 1px solid $journal-body-border-color;
+    padding: 15px;
+    margin: 15px 0;
+    textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      font-size: 18px;
+    }
+  }
+}
