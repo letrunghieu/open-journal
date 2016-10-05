@@ -4,6 +4,7 @@ import moment from 'moment';
 import JournalDate from './JournalDate';
 import JournalTitle from './JournalTitle';
 import JournalContent from './JournalContent';
+import JournalSaveButton from './JournalSaveButton';
 
 class JournalEditor extends React.Component {
     constructor(props) {
@@ -31,6 +32,7 @@ class JournalEditor extends React.Component {
             <div className="journal-editor">
                 <div className="journal-header">
                     <JournalDate timestamp={timestamp} onDateChanged={this._onDateChanged}/>
+                    <JournalSaveButton/>
                     <JournalTitle title={title} onChanged={this._onTitleChanged}/>
                     <JournalContent content={content} onChanged={this._onContentChanged}/>
                 </div>
